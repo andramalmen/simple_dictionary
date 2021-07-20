@@ -23,5 +23,12 @@ def translate(word):
                 return "Option not available"
 
 
-word = input("Enter the word:")
-print(translate(word))
+word = input("Enter the word: ")
+
+definitions = translate(word)
+
+if type(definitions) == list:
+    for definition in definitions:
+        print(definition, end="\n")
+else:
+    print(definitions)
